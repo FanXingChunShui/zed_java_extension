@@ -1,0 +1,37 @@
+proxy/src/main.rs
+  s_88ea88b94b0da3::t_5817b56bbcf601 286-290
+  s_88ea88b94b0da3::t_22c1332d367c54 307-310
+  s_88ea88b94b0da3::t_fac74c952ef26f 14-15
+  s_88ea88b94b0da3::t_71fae59200cfbd 873-952
+  s_88ea88b94b0da3::t_e14cbc87aded5f 303-306,311-312
+  s_88ea88b94b0da3::t_1e220ddc090c9e 327-376
+proxy/src/decompile.rs
+  s_88ea88b94b0da3::t_8d89a33c790067 744-769
+  s_88ea88b94b0da3::t_2c4af9791f44c0 808-811,814
+  s_88ea88b94b0da3::t_8fbbc681f00f2a 784
+  s_88ea88b94b0da3::t_fcdb0f120965f0 1488-1510
+proxy-common/src/uri.rs
+  s_88ea88b94b0da3::t_271bf7057328c5 1-2
+  s_88ea88b94b0da3::t_95ad941c5d9fa2 18-33,35-37,39-40
+  s_88ea88b94b0da3::t_9e8e393242e804 38
+  s_88ea88b94b0da3::t_cedc05e68ce78d 34,106-109
+  s_88ea88b94b0da3::t_652818c2a9eddd 97-105,110-111
+proxy-common/src/lib.rs
+  s_88ea88b94b0da3::t_286f52e8387e00 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "3de5084b1541947d9325126990e28e747aaa1db2",
+  "prompts": {},
+  "sessions": {
+    "s_88ea88b94b0da3": {
+      "agent_id": {
+        "tool": "grok",
+        "id": "01a02366-0924-7c31-be09-04ad2d91456c",
+        "model": "claude-DeepSeek-V4-Pro-discount[1M]"
+      },
+      "human_author": "ckwang <ckwang@trip.com>"
+    }
+  }
+}
