@@ -742,9 +742,7 @@ fn cache_path_in(directory: &Path, uri: &str) -> PathBuf {
 }
 
 fn sidecar_path(target: &Path) -> PathBuf {
-    let mut name = target.as_os_str().to_os_string();
-    name.push(".jdt-uri");
-    PathBuf::from(name)
+    target.with_added_extension("jdt-uri")
 }
 
 fn ensure_jdt_uri_sidecar(target: &Path, jdt_uri: &str) {

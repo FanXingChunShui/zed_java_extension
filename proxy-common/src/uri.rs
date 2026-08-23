@@ -22,20 +22,25 @@ pub fn path_to_file_uri(path: &Path) -> String {
 /// non-`file://` URIs or invalid percent-encoding.
 pub fn file_uri_to_path(uri: &str) -> Option<PathBuf> {
     let rest = uri.strip_prefix("file://")?;
-    let decoded = percent_decode_str(rest).decode_utf8().ok()?;
 
-    if cfg!(windows) {
+    #[cfg(windows)]
+    {
         if let Some(path) = rest.strip_prefix('/') {
             // file:///C:/... -> C:\...
             let decoded = percent_decode_str(path).decode_utf8().ok()?;
             return Some(PathBuf::from(decoded.replace('/', "\\")));
         }
         // file://server/share/... -> \\server\share\...
-        return Some(PathBuf::from(format!("\\\\{}", decoded.replace('/', "\\"))));
+        let decoded = percent_decode_str(rest).decode_utf8().ok()?;
+        Some(PathBuf::from(format!("\\\\{}", decoded.replace('/', "\\"))))
     }
 
-    // Unix: file:///path -> /path
-    Some(PathBuf::from(decoded.into_owned()))
+    #[cfg(not(windows))]
+    {
+        // Unix: file:///path -> /path
+        let decoded = percent_decode_str(rest).decode_utf8().ok()?;
+        Some(PathBuf::from(decoded.into_owned()))
+    }
 }
 
 fn file_uri_from_path_string(path: &str, windows: bool) -> String {
