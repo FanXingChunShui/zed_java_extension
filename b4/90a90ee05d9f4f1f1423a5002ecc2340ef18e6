@@ -1,0 +1,21 @@
+proxy-common/src/uri.rs
+  s_71c9bbe1dde9da::t_1b19250395972a 26-27,34-35,38-43
+proxy/src/decompile.rs
+  s_71c9bbe1dde9da::t_3657cb0e7496e1 745
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.43-trip",
+  "base_commit_sha": "b490a90ee05d9f4f1f1423a5002ecc2340ef18e6",
+  "prompts": {},
+  "sessions": {
+    "s_71c9bbe1dde9da": {
+      "agent_id": {
+        "tool": "grok",
+        "id": "01a0233f-6f5b-7232-8974-fe38ff7de248",
+        "model": "claude-DeepSeek-V4-Pro-discount[1M]"
+      },
+      "human_author": "ckwang <ckwang@trip.com>"
+    }
+  }
+}
